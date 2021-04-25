@@ -1,6 +1,6 @@
 # Helpers
 
-A module of essential helper functions.
+A module of handy-dandy functions.
 
 ## Installation
 ```bash
