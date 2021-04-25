@@ -1,0 +1,21 @@
+{
+  "name": "@kennethober/helpers",
+  "version": "1.0.0",
+  "description": "A module of handy-dandy functions.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennethober/helpers.git"
+  },
+  "keywords": [
+    "helpers"
+  ],
+  "author": "Kenneth Ober",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kennethober/helpers/issues"
+  },
+  "homepage": "https://github.com/kennethober/helpers#readme"
+}
