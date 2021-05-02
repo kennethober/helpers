@@ -14,8 +14,6 @@
   ],
   "author": "Kenneth Ober",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kennethober/helpers/issues"
-  },
+  "bugs": {},
   "homepage": "https://github.com/kennethober/helpers#readme"
 }
