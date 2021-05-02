@@ -26,18 +26,18 @@ Note: if using with Node.js, import either from an `.mjs` file, or from a packag
 
 ## Exported functions
 
-partial
-: (Function, any, ...) -> Function
-: Partially applies a function
+**partial**  
+  (Function, any, ...) => Function  
+  Partially applies a function
 
-unique
-: Array -> Array
-: Returns an Array with no duplicates, following the behavior of Sets.
+**unique**  
+Array => Array  
+Returns an Array with no duplicates, following the behavior of Sets.
 
-arrayMap
-: [[k1, v1], [k1, v1], [k1, v2], ...] -> { k1: [v1, v1, v2, ...], ... }
-: Return a map with a one (key) to many (values) relationship
+**arrayMap**  
+[[k1, v1], [k1, v1], [k1, v2], ...] => { k1: [v1, v1, v2, ...], ... }  
+Returns a map with a one(key)-to-many(values) relationship
 
-arrayMapUnique
-: [[k1, v1], [k1, v1], [k1, v2], ...] -> { k1: [v1, v2, ...], ... }
-: Return an array-map with no duplicates in the array-values
+**arrayMapUnique**  
+[[k1, v1], [k1, v1], [k1, v2], ...] => { k1: [v1, v2, ...], ... }  
+Returns an arraymap() with no duplicates in the array-values
