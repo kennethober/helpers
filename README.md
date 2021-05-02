@@ -7,12 +7,37 @@ A module of handy-dandy functions.
 npm install @kennethober/helpers
 ```
 
-## Usage (browser and Node.js)
+## Usage
 ```js
+// Browser
+import * as H from './path/to/node_modules/@kennethober/helpers/index.js'
 import { partial as p } from './path/to/node_modules/@kennethober/helpers/index.js'
 
+// Node.js
+import * as H from '@kennethober/helpers'
+import { partial as p } from '@kennethober/helpers'
+
 const add = (x, y) => x + y
-const add1 = p(add, 1)
+const add1 = H.partial(add, 1)
+const add2 = p(add, 2)
 ```
 
 Note: if using with Node.js, import either from an `.mjs` file, or from a package with `"type": "module"` in `package.json`.
+
+## Exported functions
+
+partial
+: (Function, any, ...) -> Function
+: Partially applies a function
+
+unique
+: Array -> Array
+: Returns an Array with no duplicates, following the behavior of Sets.
+
+arrayMap
+: [[k1, v1], [k1, v1], [k1, v2], ...] -> { k1: [v1, v1, v2, ...], ... }
+: Return a map with a one (key) to many (values) relationship
+
+arrayMapUnique
+: [[k1, v1], [k1, v1], [k1, v2], ...] -> { k1: [v1, v2, ...], ... }
+: Return an array-map with no duplicates in the array-values
