@@ -4,7 +4,10 @@
   "description": "A module of handy-dandy functions.",
   "main": "index.js",
   "type": "module",
-  "scripts": {},
+  "scripts": {
+    "lint": "standard --verbose | snazzy",
+    "fix": "standard --verbose --fix | snazzy"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kennethober/helpers.git"
@@ -15,5 +18,9 @@
   "author": "Kenneth Ober",
   "license": "ISC",
   "bugs": {},
-  "homepage": "https://github.com/kennethober/helpers#readme"
+  "homepage": "https://github.com/kennethober/helpers#readme",
+  "devDependencies": {
+    "snazzy": "^9.0.0",
+    "standard": "^16.0.3"
+  }
 }
