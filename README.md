@@ -27,17 +27,17 @@ Note: if using with Node.js, import either from an `.mjs` file, or from a packag
 ## Exported functions
 
 **partial**  
-  (Function, any, ...) => Function  
-  Partially applies a function
+(Function, any, ...) => Function  
+Partially applies a function
 
 **unique**  
 Array => Array  
 Returns an Array with no duplicates, following the behavior of Sets.
 
-**arrayMap**  
+**collect**  
 [[k1, v1], [k1, v1], [k1, v2], ...] => { k1: [v1, v1, v2, ...], ... }  
-Returns a map with a one(key)-to-many(values) relationship
+Returns an Object with a one(key)-to-many(values) relationship
 
-**arrayMapUnique**  
+**collectUnique**  
 [[k1, v1], [k1, v1], [k1, v2], ...] => { k1: [v1, v2, ...], ... }  
-Returns an arraymap() with no duplicates in the array-values
+Like collect(), but passes the Array-values through unique()

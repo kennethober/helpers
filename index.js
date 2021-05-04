@@ -1,20 +1,22 @@
-// Partially apply a function
+// (Function, any, ...) => Function  
+// Partially applies a function
 const partial = (fn, ...argsNow) => (...argsLater) => fn(...argsNow, ...argsLater)
 
-// When you want a Set but don't want to give up Array methods...
+// Array => Array  
+// Returns an Array with no duplicates, following the behavior of Sets.
 const unique = arr => [...new Set(arr)]
 
-// Return a map with a one (key) to many (values) relationship
-// [[k1, v1], [k1, v1], [k1, v2], ...] => { k1: [v1, v1, v2, ...], ... }
-const arrayMap = keyVals => keyVals.reduce((acc, [k, v]) => {
+// [[k1, v1], [k1, v1], [k1, v2], ...] => { k1: [v1, v1, v2, ...], ... }  
+// Returns an Object with a one(key)-to-many(values) relationship
+const collect = keyVals => keyVals.reduce((acc, [k, v]) => {
   acc[k] ??= []
   acc[k].push(v)
   return acc
 }, {})
 
-// Return an array-map with no duplicates in the array-values
-// [[k1, v1], [k1, v1], [k1, v2], ...] => { k1: [v1, v2, ...], ... }
-const arrayMapUnique = keyVals =>
-  Object.fromEntries(Object.entries(arrayMap(keyVals)).map(([k, v]) => [k, unique(v)]))
+// [[k1, v1], [k1, v1], [k1, v2], ...] => { k1: [v1, v2, ...], ... }  
+// Like collect(), but passes the Array-values through unique()
+const collectUnique = keyVals =>
+  Object.fromEntries(Object.entries(collect(keyVals)).map(([k, v]) => [k, unique(v)]))
 
-export { partial, unique, arrayMap, arrayMapUnique }
+export { partial, unique, collect, collectUnique }
