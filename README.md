@@ -28,18 +28,18 @@ Note: if using with Node.js, import either from an `.mjs` file, or from a packag
 
 ## Exported functions
 
-**partial**  
-Function, ...any => Function  
+**partial**\
+Function, ...any => Function\
 Partially applies a function.
 
-**collect**  
-[[k1, v1], [k1, v1], [k1, v2], ...] => { k1: [v1, v1, v2, ...], ... }  
+**collect**\
+[[k1, v1], [k1, v1], [k1, v2], ...] => { k1: [v1, v1, v2, ...], ... }\
 Returns an Object mapping String|Symbol keys to Arrays of values.
 
-**collectUnique**  
-[[k1, v1], [k1, v1], [k1, v2], ...] => { k1: Set(v1, v2, ...), ... }  
+**collectUnique**\
+[[k1, v1], [k1, v1], [k1, v2], ...] => { k1: Set(v1, v2, ...), ... }\
 Like collect(), but aggregates values into Sets.
 
-**logTime**
-Number, Function, String (optional) => undefined
+**logTime**\
+Number, Function, String (optional) => undefined\
 Call a sync|async function a number of times and log the total duration to the console.
