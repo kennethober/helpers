@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "lint": "standard --verbose | snazzy",
-    "fix": "standard --verbose --fix | snazzy"
+    "lint": "standard --verbose | snazzy; documentation lint index.js; exit 0",
+    "fix": "standard --verbose --fix | snazzy; exit 0",
+    "docs": "documentation readme index.js --section='Exported functions'"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "bugs": {},
   "homepage": "https://github.com/kennethober/helpers#readme",
   "devDependencies": {
+    "documentation": "^13.2.5",
     "snazzy": "^9.0.0",
     "standard": "^16.0.3"
   }
