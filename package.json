@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "standard --verbose | snazzy; documentation lint index.js; exit 0",
     "fix": "standard --verbose --fix | snazzy; exit 0",
-    "docs": "documentation readme index.js --section='Exported functions'"
+    "docs": "documentation readme index.js --markdown-toc-max-depth=2 --section='Exported functions'"
   },
   "repository": {
     "type": "git",

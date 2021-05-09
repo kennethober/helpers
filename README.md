@@ -35,13 +35,9 @@ Note: if using with Node.js, import either from an `.mjs` file, or from a packag
 #### Table of Contents
 
 *   [partial](#partial)
-    *   [Parameters](#parameters)
 *   [collect](#collect)
-    *   [Parameters](#parameters-1)
 *   [collectUnique](#collectunique)
-    *   [Parameters](#parameters-2)
 *   [logTime](#logtime)
-    *   [Parameters](#parameters-3)
 
 ### partial
 
