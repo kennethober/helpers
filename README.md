@@ -56,7 +56,7 @@ Collect values with the same key and return an object with a one-to-many key-val
 
 #### Parameters
 
-*   `keyVals` **[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), any>>** Key-value pairs to reduce over.
+*   `keyVals` **[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), any>>** Ordered pairs of key-values to reduce over.
 
 Returns **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)<([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), [array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)\<any>>** Object mapping keys to arrays of values.
 
@@ -66,7 +66,7 @@ Like collect(), but eliminates duplicate values (based on set behavior).
 
 #### Parameters
 
-*   `keyVals` **[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), any>>** Key-value pairs to reduce over.
+*   `keyVals` **[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), any>>** Ordered pairs of key-values to reduce over.
 
 Returns **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)<([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), [set](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<any>>** Object mapping keys to sets of unique values.
 

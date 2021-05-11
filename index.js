@@ -8,7 +8,7 @@ const partial = (fn, ...args) => (...argsLater) => fn(...args, ...argsLater)
 
 /**
  * Collect values with the same key and return an object with a one-to-many key-value relationship.
- * @param {array<array<(string|symbol), *>>} keyVals - Key-value pairs to reduce over.
+ * @param {array<array<(string|symbol), *>>} keyVals - Ordered pairs of key-values to reduce over.
  * @returns {object<(string|symbol), array<*>>} Object mapping keys to arrays of values.
  */
 const collect = keyVals => keyVals.reduce((acc, [k, v]) => {
@@ -19,7 +19,7 @@ const collect = keyVals => keyVals.reduce((acc, [k, v]) => {
 
 /**
  * Like collect(), but eliminates duplicate values (based on set behavior).
- * @param {array<array<(string|symbol), *>>} keyVals - Key-value pairs to reduce over.
+ * @param {array<array<(string|symbol), *>>} keyVals - Ordered pairs of key-values to reduce over.
  * @returns {object<(string|symbol), set<*>>} Object mapping keys to sets of unique values.
  */
 const collectUnique = keyVals => keyVals.reduce((acc, [k, v]) => {
