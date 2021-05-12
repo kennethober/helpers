@@ -18,21 +18,21 @@ tap.test('partial()', t => {
 const orderedPairs = () => [['a', 1], ['b', 2], ['a', 2], ['a', 1], ['b', 3]] // <- Has dups
 
 tap.test('collect() maps ordered pairs to keys and arrays of values', t => {
-  t.strictSame(H.collect(orderedPairs()), { 'a': [1, 2, 1], 'b': [2, 3] })
+  t.strictSame(H.collect(orderedPairs()), { a: [1, 2, 1], b: [2, 3] })
   t.end()
 })
 
 tap.test('collectUnique() maps ordered pairs to keys and sets of unique values', t => {
   t.strictSame(H.collectUnique(orderedPairs()), {
-    'a': new Set([1, 2]),
-    'b': new Set([2, 3])
+    a: new Set([1, 2]),
+    b: new Set([2, 3])
   })
   t.end()
 })
 
 tap.test('logTime()', async t => {
   let callCount = 0
-  let fn = () => { callCount++ }
+  const fn = () => { callCount++ }
 
   let timeCalled = false
   console.time = () => { timeCalled = true }
