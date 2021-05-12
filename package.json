@@ -1,12 +1,11 @@
 {
   "name": "@kennethober/helpers",
   "version": "1.0.0",
-  "description": "A module of handy-dandy functions.",
+  "description": "A module of helper functions.",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "lint": "standard --verbose | snazzy; documentation lint index.js; exit 0",
-    "fix": "standard --verbose --fix | snazzy; exit 0",
+    "lint": "standard --verbose --fix | snazzy; documentation lint index.js; exit 0",
     "docs": "documentation readme index.js --markdown-toc-max-depth=2 --section='Exported functions'",
     "test": "tap --no-coverage"
   },

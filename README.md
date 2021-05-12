@@ -1,6 +1,6 @@
 # Helpers
 
-A module of handy-dandy functions.
+A module of helper functions.
 
 The guiding principle of this module is to provide functions that are consistently useful, encourage good coding, and don't encourage forgetting how to use Javascript.
 
