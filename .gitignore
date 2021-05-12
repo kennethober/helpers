@@ -1,0 +1,3 @@
+# node-tap testing artifacts
+.nyc_output/
+coverage/
