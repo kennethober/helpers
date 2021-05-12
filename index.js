@@ -18,7 +18,7 @@ const collect = keyVals => keyVals.reduce((acc, [k, v]) => {
 }, {})
 
 /**
- * Like collect(), but eliminates duplicate values (based on set behavior).
+ * Like collect(), but eliminate duplicate values (based on set behavior).
  * @param {array<array<(string|symbol), *>>} keyVals - Ordered pairs of key-values to reduce over.
  * @returns {object<(string|symbol), set<*>>} Object mapping keys to sets of unique values.
  */

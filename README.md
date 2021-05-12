@@ -62,7 +62,7 @@ Returns **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 ### collectUnique
 
-Like collect(), but eliminates duplicate values (based on set behavior).
+Like collect(), but eliminate duplicate values (based on set behavior).
 
 #### Parameters
 
