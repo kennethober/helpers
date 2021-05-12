@@ -18,7 +18,7 @@
   ],
   "author": "Kenneth Ober",
   "license": "ISC",
-  "bugs": {},
+  "files": [],
   "homepage": "https://github.com/kennethober/helpers#readme",
   "devDependencies": {
     "documentation": "^13.2.5",
