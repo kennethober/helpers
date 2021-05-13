@@ -2,7 +2,7 @@
 
 A module of helper functions.
 
-The guiding principle of this module is to provide functions that are consistently useful, encourage good coding, and don't encourage forgetting how to use Javascript.
+The guiding principle of this module is to provide functions that are consistently useful, have no external dependencies, encourage good coding, and *don't* encourage forgetting how to use Javascript.
 
 ## Installation
 
@@ -27,6 +27,19 @@ const add2 = p(add, 2)
 ```
 
 Note: if using with Node.js, import either from an `.mjs` file, or from a package with `"type": "module"` in `package.json`.
+
+## Development
+
+```bash
+git clone https://github.com/kennethober/helpers.git
+npm install
+
+npm run lint
+
+npm test
+
+npm run docs
+```
 
 ## Exported functions
 
