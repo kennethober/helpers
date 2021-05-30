@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "lint": "standard --verbose --fix | snazzy; documentation lint index.js; exit 0",
-    "docs": "documentation readme index.js --markdown-toc-max-depth=2 --section='Exported functions'",
+    "lint": "standard --verbose --fix | snazzy; documentation lint helpers.js; exit 0",
+    "docs": "documentation readme helpers.js --markdown-toc-max-depth=2 --section='Exported functions'",
     "test": "tap --no-coverage"
   },
   "repository": {
@@ -18,7 +18,9 @@
   ],
   "author": "Kenneth Ober",
   "license": "ISC",
-  "files": [],
+  "files": [
+    "/helpers.js"
+  ],
   "homepage": "https://github.com/kennethober/helpers#readme",
   "devDependencies": {
     "documentation": "^13.2.5",

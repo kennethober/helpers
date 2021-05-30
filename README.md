@@ -48,8 +48,10 @@ npm run docs
 #### Table of Contents
 
 *   [partial](#partial)
+*   [partialOb](#partialob)
 *   [collect](#collect)
 *   [collectUnique](#collectunique)
+*   [chooseN](#choosen)
 *   [logTime](#logtime)
 
 ### partial
@@ -63,15 +65,26 @@ Partially apply a function.
 
 Returns **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** Function with the provided arguments applied.
 
+### partialOb
+
+Like partial(), but partially apply a function with a the properties of a single options-object.
+
+#### Parameters
+
+*   `fn` **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** Function to partially apply.
+*   `ob` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** Options-object arguments to apply; individual properties will be overwritten if the same keys are later passed in a new options object to the partially applied function.
+
+Returns **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** Function with the provided options-object argument applied.
+
 ### collect
 
 Collect values with the same key and return an object with a one-to-many key-value relationship.
 
 #### Parameters
 
-*   `keyVals` **[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), any>>** Ordered pairs of key-values to reduce over.
+*   `keyVals` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), any>>** Ordered pairs of key-values to reduce over.
 
-Returns **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)<([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), [array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)\<any>>** Object mapping keys to arrays of values.
+Returns **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)<([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), [Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)\<any>>** Object mapping keys to arrays of values.
 
 ### collectUnique
 
@@ -79,9 +92,20 @@ Like collect(), but eliminate duplicate values (based on set behavior).
 
 #### Parameters
 
-*   `keyVals` **[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), any>>** Ordered pairs of key-values to reduce over.
+*   `keyVals` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)<([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), any>>** Ordered pairs of key-values to reduce over.
 
-Returns **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)<([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), [set](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<any>>** Object mapping keys to sets of unique values.
+Returns **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)<([string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String) | [symbol](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), [set](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<any>>** Object mapping keys to sets of unique values.
+
+### chooseN
+
+Return N randomly chosen elements from an array.
+
+#### Parameters
+
+*   `n` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Number of elements to choose.
+*   `array` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)** Array from which to choose elements.
+
+Returns **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)** Array of chosen elements.
 
 ### logTime
 
@@ -89,8 +113,8 @@ Call a function a number of times and log the total duration to the console.
 
 #### Parameters
 
-*   `times` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** The number of times to call a given function; useful for amplifying differences in execution time between functions.
+*   `times` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** The number of times to call a given function (synchronously, with await); useful for amplifying differences in execution time between functions.
 *   `fn` **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)** The function to call; may be synchronous or asynchronous.
-*   `timerId` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** An id/label for the console timer; shows up in the log. (optional, default `` `${Date.now()}-${Math.random()}` ``)
+*   `timerId` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** An id/label for the timer; shows up in the log. (optional, default `` `${Date.now()}-${Math.random()}` ``)
 
 Returns **[undefined](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined)** Function called for side-effect only.
