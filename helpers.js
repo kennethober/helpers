@@ -7,7 +7,7 @@
 const partial = (fn, ...args) => (...newArgs) => fn(...args, ...newArgs)
 
 /**
- * Like partial(), but partially apply a function with a the properties of a single options-object.
+ * Like partial(), but partially apply a function with the properties of a single options-object.
  * @param {function} fn - Function to partially apply.
  * @param {Object} ob - Options-object arguments to apply; individual properties will be overwritten if the same keys are later passed in a new options object to the partially applied function.
  * @returns {function} Function with the provided options-object argument applied.

@@ -67,7 +67,7 @@ Returns **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference
 
 ### partialOb
 
-Like partial(), but partially apply a function with a the properties of a single options-object.
+Like partial(), but partially apply a function with the properties of a single options-object.
 
 #### Parameters
 
